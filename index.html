@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Веб-разработка</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========== ШАПКА С БУРГЕРОМ ========== -->
+  <header class="header">
+    <div class="container header__container">
+      <div class="header__inner">
+        <!-- Логотип -->
+        <a href="#" class="logo">
+          <img src="sources/svg/noemi-logo.svg" alt="Логотип" class="logo__img">
+        </a>
+
+        <!-- Кнопка бургер (для мобильных) -->
+        <button class="burger" id="burgerBtn" aria-label="Открыть меню">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+
+        <!-- Навигация -->
+        <nav class="nav" id="navMenu">
+          <a href="#" class="nav__link">О нас</a>
+          <a href="#" class="nav__link">Услуги</a>
+          <a href="#" class="nav__link">Портфолио</a>
+          <a href="#" class="nav__link">Отзывы</a>
+          <a href="#" class="nav__link">Контакты</a>
+          <a href="tel:+79991234567" class="btn btn--primary header__phone header__phone--mobile">+7 999 123-45-67</a>
+        </nav>
+
+        <a href="tel:+79991234567" class="btn btn--primary header__phone header__phone--desktop">+7 999 123-45-67</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== ГЛАВНЫЙ ЭКРАН ========== -->
+  <section class="hero">
+    <div class="container hero__container">
+      <div class="hero__content">
+        <h1 class="hero__title">Веб-разработка <br>на высшем уровне</h1>
+        <p class="hero__subtitle">Создаём сайты, которые приносят прибыль</p>
+        <a href="#" class="btn btn--primary btn--large">Начать проект</a>
+      </div>
+      <div class="hero__image">
+        <img src="sources/img/banner-bg.jpg" alt="Главное изображение" class="hero__img">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== УСЛУГИ ========== -->
+  <section class="services">
+    <div class="container">
+      <h2 class="section-title">Наши услуги</h2>
+      <div class="services__grid">
+        <div class="service-card">
+          <img src="sources/svg/search.svg" alt="Веб-разработка" class="service-card__icon">
+          <h3 class="service-card__title">Веб-разработка</h3>
+          <p class="service-card__desc">Создаём сайты любой сложности</p>
+        </div>
+        <div class="service-card">
+          <img src="sources/svg/form-circle.svg" alt="Дизайн" class="service-card__icon">
+          <h3 class="service-card__title">UI/UX Дизайн</h3>
+          <p class="service-card__desc">Проектируем удобные интерфейсы</p>
+        </div>
+        <div class="service-card">
+          <img src="sources/svg/form-x.svg" alt="Маркетинг" class="service-card__icon">
+          <h3 class="service-card__title">Маркетинг</h3>
+          <p class="service-card__desc">Продвигаем ваш бизнес в сети</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ПОДВАЛ ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__copy">&copy; 2026 Все права защищены</p>
+    </div>
+  </footer>
+
+  <!-- ========== ПОПАП (ВСПЛЫВАЮЩАЯ ФОРМА) ========== -->
+  <div class="overlay" id="overlay"></div>
+
+  <div class="popup" id="popup">
+    <div class="popup__content">
+      <button class="popup__close" id="popupClose">&times;</button>
+      <h2 class="popup__title">Свяжитесь с нами</h2>
+      <form class="popup__form" id="popupForm">
+        <div class="popup__group">
+          <label for="popupName" class="popup__label">Ваше имя</label>
+          <input type="text" id="popupName" class="popup__field" placeholder="Иван Иванов" required>
+        </div>
+        <div class="popup__group">
+          <label for="popupEmail" class="popup__label">Ваш email</label>
+          <input type="email" id="popupEmail" class="popup__field" placeholder="ivan@example.com" required>
+        </div>
+        <div class="popup__group">
+          <label for="popupMessage" class="popup__label">Сообщение</label>
+          <textarea id="popupMessage" class="popup__field popup__field--textarea" placeholder="Ваше сообщение..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary popup__submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
