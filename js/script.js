@@ -14,24 +14,25 @@ document.querySelectorAll('.nav__link').forEach(link => {
   });
 });
 
-// ===== ПОПАП =====
+// ===== ПОПАП «ВАШ ФИДБЕК» =====
 const overlay = document.getElementById('overlay');
 const popup = document.getElementById('popup');
 const popupClose = document.getElementById('popupClose');
 const popupForm = document.getElementById('popupForm');
+const loginBtn = document.getElementById('loginBtn');
 
-document.querySelector('.btn--large').addEventListener('click', function(e) {
+// Открытие попапа по клику на «Контакты»
+loginBtn.addEventListener('click', function(e) {
   e.preventDefault();
   overlay.classList.add('active');
   popup.classList.add('active');
   document.body.style.overflow = 'hidden';
 });
 
+// Закрытие
 popupClose.addEventListener('click', closePopup);
-
 overlay.addEventListener('click', closePopup);
-
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closePopup();
 });
 
@@ -41,9 +42,10 @@ function closePopup() {
   document.body.style.overflow = '';
 }
 
+// Отправка формы
 popupForm.addEventListener('submit', function(e) {
   e.preventDefault();
-  alert('Спасибо! Ваше сообщение отправлено.');
+  alert('Спасибо за ваш фидбек!');
   closePopup();
   popupForm.reset();
 });

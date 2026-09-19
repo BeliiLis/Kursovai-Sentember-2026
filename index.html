@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Веб-разработка</title>
+  <title>NOÉMI — Блог о творчестве, спорте и образе жизни</title>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- ========== ШАПКА С БУРГЕРОМ ========== -->
+  <!-- ========== ШАПКА ========== -->
   <header class="header">
     <div class="container header__container">
       <div class="header__inner">
         <!-- Логотип -->
         <a href="#" class="logo">
-          <img src="sources/svg/noemi-logo.svg" alt="Логотип" class="logo__img">
+          <span class="logo__text">NOÉMI</span>
         </a>
 
-        <!-- Кнопка бургер (для мобильных) -->
+        <!-- Кнопка бургер (только на мобильных) -->
         <button class="burger" id="burgerBtn" aria-label="Открыть меню">
           <span class="burger__line"></span>
           <span class="burger__line"></span>
@@ -27,87 +27,231 @@
 
         <!-- Навигация -->
         <nav class="nav" id="navMenu">
-          <a href="#" class="nav__link">О нас</a>
-          <a href="#" class="nav__link">Услуги</a>
-          <a href="#" class="nav__link">Портфолио</a>
-          <a href="#" class="nav__link">Отзывы</a>
-          <a href="#" class="nav__link">Контакты</a>
-          <a href="tel:+79991234567" class="btn btn--primary header__phone header__phone--mobile">+7 999 123-45-67</a>
+          <a href="#" class="nav__link">Главная</a>
+          <a href="#" class="nav__link">Посты</a>
+          <a href="#" class="nav__link">Статьи</a>
+          <a href="#" class="nav__link">Теги</a>
+          <a href="#" class="nav__link">Темы</a>
+          <a href="#" class="nav__link nav__link--feedback" id="loginBtn">Контакты</a>
         </nav>
-
-        <a href="tel:+79991234567" class="btn btn--primary header__phone header__phone--desktop">+7 999 123-45-67</a>
       </div>
     </div>
   </header>
 
-  <!-- ========== ГЛАВНЫЙ ЭКРАН ========== -->
-  <section class="hero">
-    <div class="container hero__container">
-      <div class="hero__content">
-        <h1 class="hero__title">Веб-разработка <br>на высшем уровне</h1>
-        <p class="hero__subtitle">Создаём сайты, которые приносят прибыль</p>
-        <a href="#" class="btn btn--primary btn--large">Начать проект</a>
-      </div>
-      <div class="hero__image">
-        <img src="sources/img/banner-bg.jpg" alt="Главное изображение" class="hero__img">
+  <!-- ========== БАННЕР ========== -->
+  <section class="banner">
+    <div class="container banner__container">
+      <h1 class="banner__title">Блог о творчестве, спорте,<br>и образе жизни</h1>
+    </div>
+  </section>
+
+  <!-- ========== СЕЙЧАС В ТРЕНДЕ ========== -->
+  <section class="trends">
+    <div class="container">
+      <h2 class="trends__title">Сейчас в тренде</h2>
+      <div class="trends__grid">
+        <a href="#" class="trend-card">
+          <img src="sources/img/trend1.jpg" alt="Тренд 1" class="trend-card__img">
+          <div class="trend-card__content">
+            <span class="trend-card__tag">Здоровье</span>
+            <h3 class="trend-card__name">Тянет к земле: как заземление влияет на самочувствие</h3>
+          </div>
+        </a>
+        <a href="#" class="trend-card">
+          <img src="sources/img/trend2.jpg" alt="Тренд 2" class="trend-card__img">
+          <div class="trend-card__content">
+            <span class="trend-card__tag">Спорт</span>
+            <h3 class="trend-card__name">Как правильно бегать, чтобы не навредить коленям</h3>
+          </div>
+        </a>
+        <a href="#" class="trend-card">
+          <img src="sources/img/trend3.jpg" alt="Тренд 3" class="trend-card__img">
+          <div class="trend-card__content">
+            <span class="trend-card__tag">Творчество</span>
+            <h3 class="trend-card__name">10 простых упражнений для развития креативности</h3>
+          </div>
+        </a>
+        <a href="#" class="trend-card">
+          <img src="sources/img/trend4.jpg" alt="Тренд 4" class="trend-card__img">
+          <div class="trend-card__content">
+            <span class="trend-card__tag">Стиль</span>
+            <h3 class="trend-card__name">Как создать базовый гардероб на все случаи жизни</h3>
+          </div>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- ========== УСЛУГИ ========== -->
-  <section class="services">
-    <div class="container">
-      <h2 class="section-title">Наши услуги</h2>
-      <div class="services__grid">
-        <div class="service-card">
-          <img src="sources/svg/search.svg" alt="Веб-разработка" class="service-card__icon">
-          <h3 class="service-card__title">Веб-разработка</h3>
-          <p class="service-card__desc">Создаём сайты любой сложности</p>
-        </div>
-        <div class="service-card">
-          <img src="sources/svg/form-circle.svg" alt="Дизайн" class="service-card__icon">
-          <h3 class="service-card__title">UI/UX Дизайн</h3>
-          <p class="service-card__desc">Проектируем удобные интерфейсы</p>
-        </div>
-        <div class="service-card">
-          <img src="sources/svg/form-x.svg" alt="Маркетинг" class="service-card__icon">
-          <h3 class="service-card__title">Маркетинг</h3>
-          <p class="service-card__desc">Продвигаем ваш бизнес в сети</p>
-        </div>
+  <!-- ========== ОСНОВНОЙ КОНТЕНТ + САЙДБАР ========== -->
+  <section class="content">
+    <div class="container content__container">
+
+      <div class="posts">
+        <article class="post">
+          <img src="sources/img/151.jpg" alt="Статья 1" class="post__img">
+          <div class="post__body">
+            <div class="post__tags">
+              <span class="post__tag">Творчество</span>
+            </div>
+            <h3 class="post__title">Как начать рисовать, если никогда не держал кисть в руках</h3>
+            <p class="post__text">Рисование — это не только талант, но и навык, который можно развить. Рассказываем, с чего начать и какие материалы понадобятся новичку.</p>
+            <div class="post__meta">
+              <time datetime="2026-09-20" class="post__date">20 сентября 2026</time>
+            </div>
+          </div>
+        </article>
+
+        <article class="post">
+          <img src="sources/img/2.jpg" alt="Статья 2" class="post__img">
+          <div class="post__body">
+            <div class="post__tags">
+              <span class="post__tag">Спорт</span>
+            </div>
+            <h3 class="post__title">Утренняя зарядка: 15 минут, которые изменят ваш день</h3>
+            <p class="post__text">Простые упражнения помогут проснуться, зарядиться энергией и поддерживать тело в тонусе. Не нужно идти в спортзал — достаточно 15 минут дома.</p>
+            <div class="post__meta">
+              <time datetime="2026-09-18" class="post__date">18 сентября 2026</time>
+            </div>
+          </div>
+        </article>
+
+        <article class="post">
+          <img src="sources/img/45.jpg" alt="Статья 3" class="post__img">
+          <div class="post__body">
+            <div class="post__tags">
+              <span class="post__tag">Здоровье</span>
+            </div>
+            <h3 class="post__title">Как правильно питаться, чтобы чувствовать себя лучше</h3>
+            <p class="post__text">Правильное питание — это не диета, а образ жизни. Разбираемся, какие продукты стоит добавить в рацион, а какие — исключить.</p>
+            <div class="post__meta">
+              <time datetime="2026-09-15" class="post__date">15 сентября 2026</time>
+            </div>
+          </div>
+        </article>
       </div>
+
+      <aside class="sidebar">
+
+        <div class="sidebar__block">
+          <h3 class="sidebar__title">Новые посты</h3>
+          <div class="sidebar__posts">
+            <a href="#" class="mini-post">
+              <img src="sources/img/last-post1.jpg" alt="Пост 1" class="mini-post__img">
+              <div class="mini-post__body">
+                <time datetime="2026-09-20" class="mini-post__date">20 сентября 2026</time>
+                <h4 class="mini-post__title">Как перестать откладывать дела на потом</h4>
+              </div>
+            </a>
+            <a href="#" class="mini-post">
+              <img src="sources/img/last-post2.jpg" alt="Пост 2" class="mini-post__img">
+              <div class="mini-post__body">
+                <time datetime="2026-09-19" class="mini-post__date">19 сентября 2026</time>
+                <h4 class="mini-post__title">5 книг, которые стоит прочитать осенью</h4>
+              </div>
+            </a>
+            <a href="#" class="mini-post">
+              <img src="sources/img/last-post3.jpg" alt="Пост 3" class="mini-post__img">
+              <div class="mini-post__body">
+                <time datetime="2026-09-18" class="mini-post__date">18 сентября 2026</time>
+                <h4 class="mini-post__title">Как найти время на хобби в плотном графике</h4>
+              </div>
+            </a>
+            <a href="#" class="mini-post">
+              <img src="sources/img/last-post4.jpg" alt="Пост 4" class="mini-post__img">
+              <div class="mini-post__body">
+                <time datetime="2026-09-17" class="mini-post__date">17 сентября 2026</time>
+                <h4 class="mini-post__title">Медитация для начинающих: с чего начать</h4>
+              </div>
+            </a>
+            <a href="#" class="mini-post">
+              <img src="sources/img/last-post5.jpg" alt="Пост 5" class="mini-post__img">
+              <div class="mini-post__body">
+                <time datetime="2026-09-16" class="mini-post__date">16 сентября 2026</time>
+                <h4 class="mini-post__title">Как организовать рабочее место дома</h4>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="sidebar__block">
+          <h3 class="sidebar__title">Рубрики</h3>
+          <ul class="sidebar__categories">
+            <li><a href="#" class="sidebar__category">Здоровье</a></li>
+            <li><a href="#" class="sidebar__category">Спорт</a></li>
+            <li><a href="#" class="sidebar__category">Творчество</a></li>
+            <li><a href="#" class="sidebar__category">Стиль</a></li>
+            <li><a href="#" class="sidebar__category">Психология</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar__block">
+          <h3 class="sidebar__title">Поиск</h3>
+          <form class="sidebar__search">
+            <input type="text" class="sidebar__search-field" placeholder="Что ищем?">
+            <button type="submit" class="sidebar__search-btn">
+              <img src="sources/svg/search.svg" alt="Найти" class="sidebar__search-icon">
+            </button>
+          </form>
+        </div>
+
+      </aside>
+
     </div>
   </section>
 
   <!-- ========== ПОДВАЛ ========== -->
   <footer class="footer">
     <div class="container">
-      <p class="footer__copy">&copy; 2026 Все права защищены</p>
+      <div class="footer__socials">
+        <a href="#" class="footer__social"><img src="sources/svg/001-pinterest.svg" alt="Pinterest"></a>
+        <a href="#" class="footer__social"><img src="sources/svg/002-facebook-logo.svg" alt="Facebook"></a>
+        <a href="#" class="footer__social"><img src="sources/svg/003-tumblr.svg" alt="Tumblr"></a>
+        <a href="#" class="footer__social"><img src="sources/svg/004-twitter.svg" alt="Twitter"></a>
+        <a href="#" class="footer__social"><img src="sources/svg/005-instagram.svg" alt="Instagram"></a>
+      </div>
+      <p class="footer__copy">&copy; 2026 NOÉMI. Все права защищены</p>
     </div>
   </footer>
 
-  <!-- ========== ПОПАП (ВСПЛЫВАЮЩАЯ ФОРМА) ========== -->
+  <!-- ========== ПОПАП «ВАШ ФИДБЕК» ========== -->
   <div class="overlay" id="overlay"></div>
 
   <div class="popup" id="popup">
-    <div class="popup__content">
-      <button class="popup__close" id="popupClose">&times;</button>
-      <h2 class="popup__title">Свяжитесь с нами</h2>
-      <form class="popup__form" id="popupForm">
-        <div class="popup__group">
-          <label for="popupName" class="popup__label">Ваше имя</label>
-          <input type="text" id="popupName" class="popup__field" placeholder="Иван Иванов" required>
+    <button class="popup__close" id="popupClose" aria-label="Закрыть">&times;</button>
+    <h2 class="popup__title">Ваш фидбек</h2>
+    <form class="popup__form" id="popupForm">
+
+      <div class="popup__group">
+        <label for="popupFrequency" class="popup__label">Как часто вы заходите на сайт?</label>
+        <select id="popupFrequency" class="popup__field popup__select">
+          <option>Почти каждый день</option>
+          <option>Несколько раз в неделю</option>
+          <option>Раз в неделю</option>
+          <option>Реже, чем раз в неделю</option>
+        </select>
+      </div>
+
+      <div class="popup__group">
+        <span class="popup__label">Вы подписаны на email рассылку?</span>
+        <div class="popup__radios">
+          <label class="popup__radio">
+            <input type="radio" name="subscribe" value="yes" checked>
+            <span>Да</span>
+          </label>
+          <label class="popup__radio">
+            <input type="radio" name="subscribe" value="no">
+            <span>Нет</span>
+          </label>
         </div>
-        <div class="popup__group">
-          <label for="popupEmail" class="popup__label">Ваш email</label>
-          <input type="email" id="popupEmail" class="popup__field" placeholder="ivan@example.com" required>
-        </div>
-        <div class="popup__group">
-          <label for="popupMessage" class="popup__label">Сообщение</label>
-          <textarea id="popupMessage" class="popup__field popup__field--textarea" placeholder="Ваше сообщение..." required></textarea>
-        </div>
-        <button type="submit" class="btn btn--primary popup__submit">Отправить</button>
-      </form>
-    </div>
+      </div>
+
+      <div class="popup__group">
+        <label for="popupMessage" class="popup__label">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</label>
+        <textarea id="popupMessage" class="popup__field popup__field--textarea" placeholder="Может, больше рецептов?"></textarea>
+      </div>
+
+      <button type="submit" class="popup__submit">Отправить</button>
+    </form>
   </div>
 
   <script src="js/script.js"></script>
