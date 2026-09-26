@@ -869,10 +869,6 @@ ul {
 
 /* ===== АДАПТИВ (ПЛАНШЕТЫ, 641–1200px) ===== */
 @media (max-width: 1200px) {
-  .header__top {
-    position: absolute;
-  }
-
   .banner {
     padding: 240px 0 100px;
     background-image: url("../sources/img/banner-bg-tablet.jpg");
@@ -880,6 +876,11 @@ ul {
 
   .banner__title {
     font-size: 36px;
+  }
+
+  .burger {
+    display: flex;
+    margin-left: auto;
   }
 
   .nav {
@@ -913,11 +914,6 @@ ul {
     width: 100%;
     padding: 10px 0;
     border-bottom: 1px solid #e5e5e5;
-  }
-
-  .burger {
-    display: flex;
-    margin-left: auto;
   }
 
   .trends__grid {
