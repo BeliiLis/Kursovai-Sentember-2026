@@ -25,7 +25,7 @@ if (loginBtn && overlay && popup) {
   });
 }
 
-if (popupClose) {
+if (popupClose && overlay && popup) {
   popupClose.addEventListener('click', function() {
     overlay.classList.remove('active');
     popup.classList.remove('active');
@@ -33,7 +33,7 @@ if (popupClose) {
   });
 }
 
-if (overlay) {
+if (overlay && popup) {
   overlay.addEventListener('click', function() {
     popup.classList.remove('active');
     overlay.classList.remove('active');
@@ -49,7 +49,7 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
-if (popupForm) {
+if (popupForm && overlay && popup) {
   popupForm.addEventListener('submit', function(e) {
     e.preventDefault();
     alert('Спасибо за ваш фидбек!');
