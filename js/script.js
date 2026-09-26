@@ -29,9 +29,13 @@ loginBtn.addEventListener('click', function(e) {
   document.body.style.overflow = 'hidden';
 });
 
-// Закрытие
+// Закрытие по крестику
 popupClose.addEventListener('click', closePopup);
+
+// Закрытие по клику на затемнение
 overlay.addEventListener('click', closePopup);
+
+// Закрытие по Escape
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closePopup();
 });

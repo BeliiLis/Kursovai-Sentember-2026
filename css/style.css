@@ -737,11 +737,13 @@ ul {
   transform: translate(-50%, -50%);
   width: 90%;
   max-width: 400px;
+  max-height: 90vh;
   background: #ffffff;
   border-radius: 4px;
   padding: 40px 30px 30px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   z-index: 3000;
+  overflow-y: auto;
 }
 
 .popup.active {
@@ -945,6 +947,34 @@ ul {
     flex: 1 1 calc(50% - 30px);
     max-width: calc(50% - 30px);
   }
+
+  /* Попап на планшетах */
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    max-height: 85vh;
+    padding: 35px 25px 25px;
+    overflow-y: auto;
+    z-index: 3000;
+  }
+
+  .popup__title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .popup__form {
+    gap: 15px;
+  }
+
+  .popup__field {
+    font-size: 14px;
+    padding: 9px 12px;
+  }
 }
 
 /* ===== АДАПТИВ (МОБИЛЬНЫЕ, до 640px) ===== */
@@ -995,5 +1025,25 @@ ul {
 
   .footer__socials-list {
     gap: 15px;
+  }
+
+  /* Попап на мобильных */
+  .popup {
+    width: 95%;
+    max-height: 80vh;
+    padding: 30px 20px 20px;
+  }
+
+  .popup__title {
+    font-size: 16px;
+  }
+
+  .popup__label {
+    font-size: 12px;
+  }
+
+  .popup__submit {
+    padding: 12px;
+    font-size: 14px;
   }
 }
