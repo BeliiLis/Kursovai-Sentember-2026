@@ -9,91 +9,122 @@
 </head>
 <body>
 
-  <!-- ========== ШАПКА ========== -->
+  <!-- ========== ОБЩИЙ HEADER (шапка + баннер) ========== -->
   <header class="header">
-    <div class="container header__container">
-      <div class="header__inner">
-        <!-- Логотип -->
-        <a href="#" class="logo">
-          <span class="logo__text">NOÉMI</span>
-        </a>
 
-        <!-- Кнопка бургер (только на мобильных) -->
-        <button class="burger" id="burgerBtn" aria-label="Открыть меню">
-          <span class="burger__line"></span>
-          <span class="burger__line"></span>
-          <span class="burger__line"></span>
-        </button>
+    <!-- Верхняя часть шапки -->
+    <div class="header__top">
+      <div class="container header__container">
+        <div class="header__inner">
+          <a href="#" class="logo">
+            <span class="logo__text">NOÉMI</span>
+          </a>
 
-        <!-- Навигация -->
-        <nav class="nav" id="navMenu">
-          <a href="#" class="nav__link">Главная</a>
-          <a href="#" class="nav__link">Посты</a>
-          <a href="#" class="nav__link">Статьи</a>
-          <a href="#" class="nav__link">Теги</a>
-          <a href="#" class="nav__link">Темы</a>
-          <a href="#" class="nav__link nav__link--feedback" id="loginBtn">Контакты</a>
-        </nav>
+          <button class="burger" id="burgerBtn" aria-label="Открыть меню">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </button>
+
+          <nav class="nav">
+            <ul class="nav__list" id="navMenu">
+              <li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Посты</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Статьи</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Теги</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Темы</a></li>
+              <li class="nav__item"><a href="#" class="nav__link nav__link--feedback" id="loginBtn">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
-  </header>
 
-  <!-- ========== БАННЕР ========== -->
-  <section class="banner">
-    <div class="container banner__container">
-      <h1 class="banner__title">Блог о творчестве, спорте,<br>и образе жизни</h1>
+    <!-- Баннер -->
+    <div class="banner">
+      <div class="container banner__container">
+        <h1 class="banner__title">Блог о творчестве, спорте,<br>и образе жизни</h1>
+      </div>
     </div>
-  </section>
+
+  </header>
 
   <!-- ========== СЕЙЧАС В ТРЕНДЕ ========== -->
   <section class="trends">
-    <div class="container">
-      <h2 class="trends__title">Сейчас в тренде</h2>
-      <div class="trends__grid">
-        <a href="#" class="trend-card">
-          <img src="sources/img/trend1.jpg" alt="Тренд 1" class="trend-card__img">
-          <div class="trend-card__content">
-            <span class="trend-card__tag">Здоровье</span>
-            <h3 class="trend-card__name">Тянет к земле: как заземление влияет на самочувствие</h3>
-          </div>
-        </a>
-        <a href="#" class="trend-card">
-          <img src="sources/img/trend2.jpg" alt="Тренд 2" class="trend-card__img">
-          <div class="trend-card__content">
-            <span class="trend-card__tag">Спорт</span>
-            <h3 class="trend-card__name">Как правильно бегать, чтобы не навредить коленям</h3>
-          </div>
-        </a>
-        <a href="#" class="trend-card">
-          <img src="sources/img/trend3.jpg" alt="Тренд 3" class="trend-card__img">
-          <div class="trend-card__content">
-            <span class="trend-card__tag">Творчество</span>
-            <h3 class="trend-card__name">10 простых упражнений для развития креативности</h3>
-          </div>
-        </a>
-        <a href="#" class="trend-card">
-          <img src="sources/img/trend4.jpg" alt="Тренд 4" class="trend-card__img">
-          <div class="trend-card__content">
-            <span class="trend-card__tag">Стиль</span>
-            <h3 class="trend-card__name">Как создать базовый гардероб на все случаи жизни</h3>
-          </div>
-        </a>
-      </div>
+    <h2 class="trends__title">Сейчас в тренде</h2>
+    <div class="trends__grid">
+
+      <article class="trend-card">
+        <img src="sources/img/trend1.jpg" alt="Тренд 1" class="trend-card__img">
+        <div class="trend-card__overlay"></div>
+        <div class="trend-card__content">
+          <ul class="trend-card__tags">
+            <li class="trend-card__tag"><a href="#" class="trend-card__tag-link">Здоровье</a></li>
+          </ul>
+          <h3 class="trend-card__name">
+            <a href="#" class="trend-card__link">Тянет к земле: как заземление влияет на самочувствие</a>
+          </h3>
+        </div>
+      </article>
+
+      <article class="trend-card">
+        <img src="sources/img/trend2.jpg" alt="Тренд 2" class="trend-card__img">
+        <div class="trend-card__overlay"></div>
+        <div class="trend-card__content">
+          <ul class="trend-card__tags">
+            <li class="trend-card__tag"><a href="#" class="trend-card__tag-link">Спорт</a></li>
+          </ul>
+          <h3 class="trend-card__name">
+            <a href="#" class="trend-card__link">Как правильно бегать, чтобы не навредить коленям</a>
+          </h3>
+        </div>
+      </article>
+
+      <article class="trend-card">
+        <img src="sources/img/trend3.jpg" alt="Тренд 3" class="trend-card__img">
+        <div class="trend-card__overlay"></div>
+        <div class="trend-card__content">
+          <ul class="trend-card__tags">
+            <li class="trend-card__tag"><a href="#" class="trend-card__tag-link">Творчество</a></li>
+          </ul>
+          <h3 class="trend-card__name">
+            <a href="#" class="trend-card__link">10 простых упражнений для развития креативности</a>
+          </h3>
+        </div>
+      </article>
+
+      <article class="trend-card">
+        <img src="sources/img/trend4.jpg" alt="Тренд 4" class="trend-card__img">
+        <div class="trend-card__overlay"></div>
+        <div class="trend-card__content">
+          <ul class="trend-card__tags">
+            <li class="trend-card__tag"><a href="#" class="trend-card__tag-link">Стиль</a></li>
+          </ul>
+          <h3 class="trend-card__name">
+            <a href="#" class="trend-card__link">Как создать базовый гардероб на все случаи жизни</a>
+          </h3>
+        </div>
+      </article>
+
     </div>
   </section>
 
   <!-- ========== ОСНОВНОЙ КОНТЕНТ + САЙДБАР ========== -->
-  <section class="content">
+  <div class="content">
     <div class="container content__container">
 
-      <div class="posts">
+      <!-- Основной контент -->
+      <main class="posts">
+
         <article class="post">
           <img src="sources/img/151.jpg" alt="Статья 1" class="post__img">
           <div class="post__body">
-            <div class="post__tags">
-              <span class="post__tag">Творчество</span>
-            </div>
-            <h3 class="post__title">Как начать рисовать, если никогда не держал кисть в руках</h3>
+            <ul class="post__tags">
+              <li class="post__tag"><a href="#" class="post__tag-link">Творчество</a></li>
+            </ul>
+            <h3 class="post__title">
+              <a href="#" class="post__link">Как начать рисовать, если никогда не держал кисть в руках</a>
+            </h3>
             <p class="post__text">Рисование — это не только талант, но и навык, который можно развить. Рассказываем, с чего начать и какие материалы понадобятся новичку.</p>
             <div class="post__meta">
               <time datetime="2026-09-20" class="post__date">20 сентября 2026</time>
@@ -104,11 +135,13 @@
         <article class="post">
           <img src="sources/img/2.jpg" alt="Статья 2" class="post__img">
           <div class="post__body">
-            <div class="post__tags">
-              <span class="post__tag">Спорт</span>
-            </div>
-            <h3 class="post__title">Утренняя зарядка: 15 минут, которые изменят ваш день</h3>
-            <p class="post__text">Простые упражнения помогут проснуться, зарядиться энергией и поддерживать тело в тонусе. Не нужно идти в спортзал — достаточно 15 минут дома.</p>
+            <ul class="post__tags">
+              <li class="post__tag"><a href="#" class="post__tag-link">Спорт</a></li>
+            </ul>
+            <h3 class="post__title">
+              <a href="#" class="post__link">Утренняя зарядка: 15 минут, которые изменят ваш день</a>
+            </h3>
+            <p class="post__text">Простые упражнения помогут проснуться, зарядиться энергией и поддерживать тело в тонусе.</p>
             <div class="post__meta">
               <time datetime="2026-09-18" class="post__date">18 сентября 2026</time>
             </div>
@@ -118,73 +151,96 @@
         <article class="post">
           <img src="sources/img/45.jpg" alt="Статья 3" class="post__img">
           <div class="post__body">
-            <div class="post__tags">
-              <span class="post__tag">Здоровье</span>
-            </div>
-            <h3 class="post__title">Как правильно питаться, чтобы чувствовать себя лучше</h3>
-            <p class="post__text">Правильное питание — это не диета, а образ жизни. Разбираемся, какие продукты стоит добавить в рацион, а какие — исключить.</p>
+            <ul class="post__tags">
+              <li class="post__tag"><a href="#" class="post__tag-link">Здоровье</a></li>
+            </ul>
+            <h3 class="post__title">
+              <a href="#" class="post__link">Как правильно питаться, чтобы чувствовать себя лучше</a>
+            </h3>
+            <p class="post__text">Правильное питание — это не диета, а образ жизни. Разбираемся, какие продукты стоит добавить в рацион.</p>
             <div class="post__meta">
               <time datetime="2026-09-15" class="post__date">15 сентября 2026</time>
             </div>
           </div>
         </article>
-      </div>
 
+      </main>
+
+      <!-- Сайдбар -->
       <aside class="sidebar">
 
-        <div class="sidebar__block">
+        <!-- Новые посты -->
+        <section class="sidebar__block">
           <h3 class="sidebar__title">Новые посты</h3>
           <div class="sidebar__posts">
-            <a href="#" class="mini-post">
+
+            <article class="mini-post">
               <img src="sources/img/last-post1.jpg" alt="Пост 1" class="mini-post__img">
               <div class="mini-post__body">
                 <time datetime="2026-09-20" class="mini-post__date">20 сентября 2026</time>
-                <h4 class="mini-post__title">Как перестать откладывать дела на потом</h4>
+                <h4 class="mini-post__title">
+                  <a href="#" class="mini-post__link">Как перестать откладывать дела на потом</a>
+                </h4>
               </div>
-            </a>
-            <a href="#" class="mini-post">
+            </article>
+
+            <article class="mini-post">
               <img src="sources/img/last-post2.jpg" alt="Пост 2" class="mini-post__img">
               <div class="mini-post__body">
                 <time datetime="2026-09-19" class="mini-post__date">19 сентября 2026</time>
-                <h4 class="mini-post__title">5 книг, которые стоит прочитать осенью</h4>
+                <h4 class="mini-post__title">
+                  <a href="#" class="mini-post__link">5 книг, которые стоит прочитать осенью</a>
+                </h4>
               </div>
-            </a>
-            <a href="#" class="mini-post">
+            </article>
+
+            <article class="mini-post">
               <img src="sources/img/last-post3.jpg" alt="Пост 3" class="mini-post__img">
               <div class="mini-post__body">
                 <time datetime="2026-09-18" class="mini-post__date">18 сентября 2026</time>
-                <h4 class="mini-post__title">Как найти время на хобби в плотном графике</h4>
+                <h4 class="mini-post__title">
+                  <a href="#" class="mini-post__link">Как найти время на хобби в плотном графике</a>
+                </h4>
               </div>
-            </a>
-            <a href="#" class="mini-post">
+            </article>
+
+            <article class="mini-post">
               <img src="sources/img/last-post4.jpg" alt="Пост 4" class="mini-post__img">
               <div class="mini-post__body">
                 <time datetime="2026-09-17" class="mini-post__date">17 сентября 2026</time>
-                <h4 class="mini-post__title">Медитация для начинающих: с чего начать</h4>
+                <h4 class="mini-post__title">
+                  <a href="#" class="mini-post__link">Медитация для начинающих: с чего начать</a>
+                </h4>
               </div>
-            </a>
-            <a href="#" class="mini-post">
+            </article>
+
+            <article class="mini-post">
               <img src="sources/img/last-post5.jpg" alt="Пост 5" class="mini-post__img">
               <div class="mini-post__body">
                 <time datetime="2026-09-16" class="mini-post__date">16 сентября 2026</time>
-                <h4 class="mini-post__title">Как организовать рабочее место дома</h4>
+                <h4 class="mini-post__title">
+                  <a href="#" class="mini-post__link">Как организовать рабочее место дома</a>
+                </h4>
               </div>
-            </a>
-          </div>
-        </div>
+            </article>
 
-        <div class="sidebar__block">
+          </div>
+        </section>
+
+        <!-- Рубрики -->
+        <section class="sidebar__block">
           <h3 class="sidebar__title">Рубрики</h3>
           <ul class="sidebar__categories">
-            <li><a href="#" class="sidebar__category">Здоровье</a></li>
-            <li><a href="#" class="sidebar__category">Спорт</a></li>
-            <li><a href="#" class="sidebar__category">Творчество</a></li>
-            <li><a href="#" class="sidebar__category">Стиль</a></li>
-            <li><a href="#" class="sidebar__category">Психология</a></li>
+            <li class="sidebar__category-item"><a href="#" class="sidebar__category">Здоровье</a></li>
+            <li class="sidebar__category-item"><a href="#" class="sidebar__category">Спорт</a></li>
+            <li class="sidebar__category-item"><a href="#" class="sidebar__category">Творчество</a></li>
+            <li class="sidebar__category-item"><a href="#" class="sidebar__category">Стиль</a></li>
+            <li class="sidebar__category-item"><a href="#" class="sidebar__category">Психология</a></li>
           </ul>
-        </div>
+        </section>
 
-        <div class="sidebar__block">
+        <!-- Поиск -->
+        <section class="sidebar__block">
           <h3 class="sidebar__title">Поиск</h3>
           <form class="sidebar__search">
             <input type="text" class="sidebar__search-field" placeholder="Что ищем?">
@@ -192,24 +248,111 @@
               <img src="sources/svg/search.svg" alt="Найти" class="sidebar__search-icon">
             </button>
           </form>
-        </div>
+        </section>
+
+        <!-- Рассылка -->
+        <section class="sidebar__block">
+          <h3 class="sidebar__title">Рассылка</h3>
+          <form class="sidebar__subscribe">
+            <input type="email" class="sidebar__subscribe-field" placeholder="Ваш email-адрес">
+            <button type="submit" class="sidebar__subscribe-btn">Подписаться</button>
+          </form>
+        </section>
+
+        <!-- Теги -->
+        <section class="sidebar__block">
+          <h3 class="sidebar__title">Теги</h3>
+          <ul class="sidebar__tags">
+            <li class="sidebar__tag-item"><a href="#" class="sidebar__tag">Fashion</a></li>
+            <li class="sidebar__tag-item"><a href="#" class="sidebar__tag">Music</a></li>
+            <li class="sidebar__tag-item"><a href="#" class="sidebar__tag">Lifestyle</a></li>
+            <li class="sidebar__tag-item"><a href="#" class="sidebar__tag">Art</a></li>
+            <li class="sidebar__tag-item"><a href="#" class="sidebar__tag">Interior</a></li>
+            <li class="sidebar__tag-item"><a href="#" class="sidebar__tag">Travel</a></li>
+            <li class="sidebar__tag-item"><a href="#" class="sidebar__tag">Food</a></li>
+            <li class="sidebar__tag-item"><a href="#" class="sidebar__tag">Health</a></li>
+          </ul>
+        </section>
+
+        <!-- Темы -->
+        <section class="sidebar__block">
+          <h3 class="sidebar__title">Темы</h3>
+          <ul class="sidebar__themes">
+            <li class="sidebar__theme-item"><a href="#" class="sidebar__theme">Красота <span class="sidebar__theme-count">12</span></a></li>
+            <li class="sidebar__theme-item"><a href="#" class="sidebar__theme">Здоровье <span class="sidebar__theme-count">4</span></a></li>
+            <li class="sidebar__theme-item"><a href="#" class="sidebar__theme">Образ жизни <span class="sidebar__theme-count">145</span></a></li>
+            <li class="sidebar__theme-item"><a href="#" class="sidebar__theme">Музыка <span class="sidebar__theme-count">28</span></a></li>
+            <li class="sidebar__theme-item"><a href="#" class="sidebar__theme">Спорт <span class="sidebar__theme-count">62</span></a></li>
+            <li class="sidebar__theme-item"><a href="#" class="sidebar__theme">Йога <span class="sidebar__theme-count">8</span></a></li>
+          </ul>
+        </section>
 
       </aside>
 
+    </div>
+  </div>
+
+  <!-- ========== НАШИ ИЗДЕЛИЯ ========== -->
+  <section class="shop">
+    <div class="container">
+      <h2 class="shop__title">Наши изделия</h2>
+      <div class="shop__grid">
+
+        <article class="shop-card">
+          <img src="sources/img/shop-item-desk1.jpg" alt="Подушки на диван" class="shop-card__img">
+          <h3 class="shop-card__name">Подушки на диван</h3>
+          <p class="shop-card__desc">Набор из двух подушек с модными принтами. Видео о создании <a href="#" class="shop-card__link">здесь</a>.</p>
+          <div class="shop-card__bottom">
+            <div class="shop-card__price">
+              <span class="shop-card__price-old">1000 ₽</span>
+              <span class="shop-card__price-new">800 ₽</span>
+            </div>
+            <a href="#" class="shop-card__btn">В магазин</a>
+          </div>
+        </article>
+
+        <article class="shop-card">
+          <img src="sources/img/shop-item-desk2.jpg" alt="Кукла Зайчик" class="shop-card__img">
+          <h3 class="shop-card__name">Кукла «Зайчик»</h3>
+          <p class="shop-card__desc">Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a href="#" class="shop-card__link">весенняя серия постов</a> в блоге и несколько подкастов.</p>
+          <div class="shop-card__bottom">
+            <div class="shop-card__price">
+              <span class="shop-card__price-new">3500 ₽</span>
+            </div>
+            <a href="#" class="shop-card__btn">В магазин</a>
+          </div>
+        </article>
+
+        <article class="shop-card">
+          <img src="sources/img/shop-item-desk3.jpg" alt="Шестиугольная рамка" class="shop-card__img">
+          <h3 class="shop-card__name">Шестиугольная рамка</h3>
+          <p class="shop-card__desc">Необычная рамка для украшения дома из видео <a href="#" class="shop-card__link">«Как сделать рамку из подручных средств за 30 минут»</a>.</p>
+          <div class="shop-card__bottom">
+            <div class="shop-card__price">
+              <span class="shop-card__price-old">500 ₽</span>
+              <span class="shop-card__price-new">400 ₽</span>
+            </div>
+            <a href="#" class="shop-card__btn">В магазин</a>
+          </div>
+        </article>
+
+      </div>
     </div>
   </section>
 
   <!-- ========== ПОДВАЛ ========== -->
   <footer class="footer">
     <div class="container">
-      <div class="footer__socials">
-        <a href="#" class="footer__social"><img src="sources/svg/001-pinterest.svg" alt="Pinterest"></a>
-        <a href="#" class="footer__social"><img src="sources/svg/002-facebook-logo.svg" alt="Facebook"></a>
-        <a href="#" class="footer__social"><img src="sources/svg/003-tumblr.svg" alt="Tumblr"></a>
-        <a href="#" class="footer__social"><img src="sources/svg/004-twitter.svg" alt="Twitter"></a>
-        <a href="#" class="footer__social"><img src="sources/svg/005-instagram.svg" alt="Instagram"></a>
-      </div>
-      <p class="footer__copy">&copy; 2026 NOÉMI. Все права защищены</p>
+      <address class="footer__socials">
+        <ul class="footer__socials-list">
+          <li class="footer__socials-item"><a href="#" class="footer__social"><img src="sources/svg/001-pinterest.svg" alt="Pinterest"></a></li>
+          <li class="footer__socials-item"><a href="#" class="footer__social"><img src="sources/svg/002-facebook-logo.svg" alt="Facebook"></a></li>
+          <li class="footer__socials-item"><a href="#" class="footer__social"><img src="sources/svg/003-tumblr.svg" alt="Tumblr"></a></li>
+          <li class="footer__socials-item"><a href="#" class="footer__social"><img src="sources/svg/004-twitter.svg" alt="Twitter"></a></li>
+          <li class="footer__socials-item"><a href="#" class="footer__social"><img src="sources/svg/005-instagram.svg" alt="Instagram"></a></li>
+        </ul>
+      </address>
+      <p class="footer__copy">Copyright &copy; 2009–2026 City Blog LLC.</p>
     </div>
   </footer>
 
