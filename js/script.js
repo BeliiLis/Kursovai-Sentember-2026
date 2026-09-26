@@ -21,7 +21,6 @@ const popupClose = document.getElementById('popupClose');
 const popupForm = document.getElementById('popupForm');
 const loginBtn = document.getElementById('loginBtn');
 
-// Открытие попапа по клику на «Контакты»
 loginBtn.addEventListener('click', function(e) {
   e.preventDefault();
   overlay.classList.add('active');
@@ -29,13 +28,8 @@ loginBtn.addEventListener('click', function(e) {
   document.body.style.overflow = 'hidden';
 });
 
-// Закрытие по крестику
 popupClose.addEventListener('click', closePopup);
-
-// Закрытие по клику на затемнение
 overlay.addEventListener('click', closePopup);
-
-// Закрытие по Escape
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closePopup();
 });
@@ -46,7 +40,6 @@ function closePopup() {
   document.body.style.overflow = '';
 }
 
-// Отправка формы
 popupForm.addEventListener('submit', function(e) {
   e.preventDefault();
   alert('Спасибо за ваш фидбек!');
